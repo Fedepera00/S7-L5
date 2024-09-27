@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMacStore - Back Office</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="./Home.html"> <i class="fas fa-laptop"></i> IMacStore </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./home.html"><i class="fas fa-home"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./backOffice.html">Gestisci Prodotti</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Back Office -->
+    <main class="container mt-5">
+      <h1 class="text-center mb-4">
+        Gestisci i Prodotti
+        <div id="spinner" class="spinner-border text-primary" role="status" style="display: none">
+          <span class="visually-hidden">Caricamento...</span>
+        </div>
+      </h1>
+      <form id="productForm" class="mb-5">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="productNome" class="form-label">Nome Prodotto</label>
+            <input type="text" id="productNome" class="form-control" required />
+          </div>
+          <div class="col-md-6">
+            <label for="productBrand" class="form-label">Brand</label>
+            <input type="text" id="productBrand" class="form-control" required />
+          </div>
+          <div class="col-12">
+            <label for="productDescrizione" class="form-label">Descrizione</label>
+            <input type="text" id="productDescrizione" class="form-control" required />
+          </div>
+          <div class="col-12">
+            <label for="productFoto" class="form-label">URL Immagine</label>
+            <input type="text" id="productFoto" class="form-control" required />
+          </div>
+          <div class="col-12">
+            <label for="productPrezzo" class="form-label">Prezzo (€)</label>
+            <input type="number" id="productPrezzo" class="form-control" required />
+          </div>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+          <button id="createProductBtn" class="btn btn-primary me-2"><i class="fas fa-plus-circle"></i> Crea Prodotto</button>
+          <button type="reset" class="btn btn-secondary" onclick="return confirm('Vuoi davvero resettare il form?')"><i class="fas fa-undo"></i> Reset</button>
+        </div>
+      </form>
+      <div class="row row-cols-1 row-cols-md-3 g-4" id="productList"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <p>© 2024 MacBook Store di Federico Peralta | Tutti i diritti riservati</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/backOffice.js"></script>
+  </body>
+</html>

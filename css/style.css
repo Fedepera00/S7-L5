@@ -1,0 +1,59 @@
+body {
+  font-family: "San Francisco", "Roboto", sans-serif;
+  background: linear-gradient(to right, #8ecae6, #219ebc);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.navbar {
+  background-color: #023047;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+/* Stile per le card dei prodotti */
+.product-card .card {
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.product-card .card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  border-radius: 15px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/* Pulsanti */
+.btn-primary {
+  background-color: #219ebc;
+  border-color: #219ebc;
+}
+
+.btn-primary:hover {
+  background-color: #8ecae6;
+  border-color: #8ecae6;
+}
+
+/* Footer */
+footer {
+  background-color: #023047;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
